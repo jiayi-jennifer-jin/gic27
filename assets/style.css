@@ -154,7 +154,7 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
 .fact-cell+.fact-cell{border-left:1px solid var(--line)}
 .fact-cell:last-child{padding-right:0;text-align:right}
 .fact-nowrap{white-space:nowrap}
-.hero-photo{min-height:690px;background:#27303d url('skyline-upscaled.webp') center center/cover no-repeat;position:relative;color:#f6f6f6;isolation:isolate;}
+.hero-photo{min-height:690px;background:#27303d url('hero.png') center center/cover no-repeat;position:relative;color:#f6f6f6;isolation:isolate;}
 .hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,17,23,.18),transparent 58%),linear-gradient(0deg,rgba(3,12,17,.48) 0%,transparent 27%);z-index:-1}
 .hero-photo-layout{min-height:690px;display:flex;flex-direction:column;justify-content:space-between;padding-top:73px;padding-bottom:38px;}
 .hero-copy h1{font-size:clamp(84px,7.4vw,118px);line-height:.92;letter-spacing:-.085em;margin:0;font-weight:800;max-width:680px}

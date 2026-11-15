@@ -154,7 +154,7 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
 .fact-cell+.fact-cell{border-left:1px solid var(--line)}
 .fact-cell:last-child{padding-right:0;text-align:right}
 .fact-nowrap{white-space:nowrap}
-.hero-photo{min-height:690px;background:#27303d url('hero.png') center center/cover no-repeat;position:relative;color:#f6f6f6;isolation:isolate;}
+.hero-photo{min-height:690px;background:#27303d url('skyline-upscaled.webp') center center/cover no-repeat;position:relative;color:#f6f6f6;isolation:isolate;}
 .hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,17,23,.18),transparent 58%),linear-gradient(0deg,rgba(3,12,17,.48) 0%,transparent 27%);z-index:-1}
 .hero-photo-layout{min-height:690px;display:flex;flex-direction:column;justify-content:space-between;padding-top:73px;padding-bottom:38px;}
 .hero-copy h1{font-size:clamp(84px,7.4vw,118px);line-height:.92;letter-spacing:-.085em;margin:0;font-weight:800;max-width:680px}
@@ -213,4 +213,114 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   .section-intro{grid-template-columns:1fr;gap:4px;margin-bottom:30px}
   .section-intro p{text-align:left;padding-top:0;font-size:15px}
   .section-intro h2{font-size:clamp(43px,9vw,66px)}
+}
+
+
+/* v5 — user-approved hero composition (15 Nov 2026).
+   The skyline is a clean image; headline, subtitles and institutional logos
+   are separate, accessible HTML elements and remain sharp at any screen size. */
+.facts-row{border:0}
+.fact-cell + .fact-cell{border-left:0}
+.hero-photo{
+  min-height:820px;
+  background-image:url('skyline-ai-clean.webp');
+  background-color:#182538;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:#fff;
+}
+.hero-photo-overlay{
+  background:linear-gradient(90deg,rgba(9,20,32,.25) 0%,rgba(9,20,32,.07) 58%,transparent 100%),
+             linear-gradient(0deg,rgba(8,17,29,.52) 0%,rgba(8,17,29,.10) 47%,transparent 73%);
+}
+.hero-photo-layout{
+  min-height:820px;
+  padding-top:70px;
+  padding-bottom:52px;
+  justify-content:space-between;
+  gap:70px;
+}
+.hero-copy h1{
+  max-width:730px;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:clamp(78px,7.8vw,121px);
+  font-weight:800;
+  line-height:.91;
+  letter-spacing:-.075em;
+  margin:0;
+}
+.hero-copy h1 em{
+  color:#f5bd24;
+  font-family:inherit;
+  font-weight:400;
+  font-style:italic;
+  letter-spacing:-.06em;
+}
+.hero-copy > p{
+  margin:21px 0 0;
+  padding:0;
+  border:0;
+  font-size:clamp(22px,1.8vw,29px);
+  font-weight:400;
+  letter-spacing:-.018em;
+  line-height:1.24;
+  color:#fff;
+}
+.organisations{width:min(790px,100%);display:flex;flex-direction:column;gap:32px}
+.organisation-group{margin:0;padding:0;border:0}
+.organisation-label{
+  margin:0 0 16px;
+  padding:0;
+  border:0;
+  color:#fff;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:clamp(18px,1.45vw,22px);
+  font-weight:700;
+  letter-spacing:-.01em;
+  line-height:1.25;
+}
+.organisation-logos{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  column-gap:42px;
+  align-items:center;
+  justify-items:start;
+}
+.organisation-logo{width:100%;height:102px;display:flex;align-items:center;justify-content:flex-start}
+.organisation-logo img{display:block;width:auto;height:auto;max-width:100%;max-height:102px;object-fit:contain}
+/* No horizontal/vertical dividing lines, plaques, or colored labels inside the hero. */
+@media(max-width:1150px){
+  .hero-photo,.hero-photo-layout{min-height:800px}
+  .hero-copy h1{font-size:clamp(70px,8.1vw,106px)}
+  .organisations{width:min(730px,100%)}
+}
+@media(max-width:790px){
+  .hero-photo,.hero-photo-layout{min-height:790px}
+  .hero-photo-layout{padding-top:55px;padding-bottom:40px;gap:55px}
+  .hero-photo{background-position:53% center}
+  .hero-copy h1{font-size:clamp(64px,10vw,92px)}
+  .organisation-label{font-size:19px}
+  .organisation-logos{column-gap:22px}
+  .organisation-logo{height:86px}
+  .organisation-logo img{max-height:86px}
+  .organisations{gap:28px}
+}
+@media(max-width:600px){
+  .hero-photo,.hero-photo-layout{min-height:820px}
+  .hero-photo-layout{padding-top:45px;padding-bottom:34px;gap:46px}
+  .hero-photo{background-position:54% center}
+  .hero-copy h1{font-size:clamp(58px,13.2vw,79px);letter-spacing:-.078em}
+  .hero-copy > p{font-size:clamp(18px,4.4vw,22px);line-height:1.3;margin-top:19px}
+  .organisations{gap:28px;width:100%}
+  .organisation-label{font-size:17px;margin-bottom:14px}
+  .organisation-logos{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:17px}
+  .organisation-logo{height:72px}
+  .organisation-logo img{max-height:71px;max-width:100%}
+}
+@media(max-width:360px){
+  .hero-photo,.hero-photo-layout{min-height:800px}
+  .hero-copy h1{font-size:54px}
+  .hero-copy > p{font-size:17px}
+  .organisation-label{font-size:16px}
 }

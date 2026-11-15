@@ -567,3 +567,78 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   #programme .session-link {grid-template-columns:28px minmax(0,1fr) 17px;gap:7px}
   #programme .session-name {font-size:16px}
 }
+
+
+/* v12: Programme-only refinements, approved 15 Nov 2026. */
+/* Optically align the two small blue chapter labels, preserving the schedule frame. */
+@media(min-width:1051px){
+  #programme .programme-lead {padding-top:29px;}
+}
+#programme .schedule-top {
+  font-size:14.5px;
+  line-height:1.3;
+  letter-spacing:.08em;
+  font-weight:800;
+}
+#programme .schedule-date {font-weight:750;}
+/* The number is slightly smaller and shares its lower edge with its title. */
+#programme .session-link {
+  grid-template-columns:39px minmax(0,1fr) 40px;
+  gap:10px;
+  align-items:end;
+}
+#programme .session-num {
+  font-size:22px;
+  line-height:1.2;
+  align-self:end;
+}
+#programme .session-name {
+  line-height:1.3;
+  align-self:end;
+}
+#programme .session-arrow {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  align-self:center;
+  width:40px;
+  height:40px;
+  line-height:1;
+}
+#programme .session-arrow-icon {
+  display:block;
+  width:40px;
+  height:40px;
+  color:var(--blue);
+  flex:none;
+}
+/* Twice the prior 12px headline size, with responsive wrapping on narrow devices. */
+#programme .programme-status {
+  font-size:24px;
+  line-height:1.2;
+  letter-spacing:.025em;
+  padding:15px 17px;
+  max-width:100%;
+  gap:16px;
+}
+#programme .programme-status span {font-size:28px;flex:none;}
+@media(max-width:1050px){
+  #programme .programme-lead {padding-top:0;}
+}
+@media(max-width:670px){
+  #programme .schedule-top {font-size:13.5px;}
+  #programme .session-link {
+    grid-template-columns:30px minmax(0,1fr) 34px;
+    gap:8px;
+  }
+  #programme .session-num {font-size:20px;}
+  #programme .session-arrow {width:34px;height:34px;}
+  #programme .session-arrow-icon {width:34px;height:34px;}
+  #programme .programme-status {font-size:22px;line-height:1.22;gap:10px;}
+  #programme .programme-status span {font-size:25px;}
+}
+@media(max-width:380px){
+  #programme .session-link {grid-template-columns:29px minmax(0,1fr) 30px;gap:7px;}
+  #programme .session-arrow,#programme .session-arrow-icon {width:30px;height:30px;}
+  #programme .programme-status {font-size:20px;}
+}

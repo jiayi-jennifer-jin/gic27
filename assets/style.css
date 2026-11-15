@@ -642,3 +642,69 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   #programme .session-arrow,#programme .session-arrow-icon {width:30px;height:30px;}
   #programme .programme-status {font-size:20px;}
 }
+
+
+/* v14: dependable contact details and university label under TIC. */
+.contact-copy-button[hidden] { display:none!important; }
+.fact-venue-institution {
+  display:block;
+  margin-top:4px;
+  font-size:.56em;
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:.015em;
+  white-space:nowrap;
+}
+.contact-email-block { margin:0 0 23px; }
+.contact-email-label {
+  display:block;
+  font-size:12px;
+  color:var(--blue);
+  letter-spacing:.09em;
+  font-weight:800;
+  margin-bottom:7px;
+}
+.contact-email-address {
+  display:inline-block;
+  color:var(--ink);
+  font-weight:700;
+  font-size:clamp(21px,2.1vw,29px);
+  line-height:1.25;
+  letter-spacing:-.035em;
+  overflow-wrap:anywhere;
+  text-decoration:underline;
+  text-underline-offset:5px;
+  text-decoration-thickness:1px;
+}
+.contact-email-address:hover, .contact-email-address:focus-visible { color:var(--blue); }
+.contact-actions { display:flex; align-items:center; gap:21px; flex-wrap:wrap; }
+.contact-copy-button { cursor:pointer; font-family:inherit; min-height:50px; gap:35px; }
+.contact-copy-button:focus-visible { outline:2px solid var(--blue); }
+.contact-email-app {
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  line-height:1.5;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-decoration:underline;
+  text-underline-offset:5px;
+}
+.contact-email-app:hover, .contact-email-app:focus-visible { color:var(--blue); }
+.contact-copy-status { margin:10px 0 0!important; min-height:0; font-size:13px!important; color:var(--blue)!important; }
+.contact-copy-status:empty { display:none; }
+.contact-email-help { margin:16px 0 0!important; font-size:13px!important; line-height:1.55!important; color:var(--muted)!important; }
+@media(max-width:1150px) and (min-width:791px) {
+  .facts-row {grid-template-columns:.85fr 1.18fr 1.3fr;}
+  .fact-venue-institution {font-size:.51em;}
+}
+@media(max-width:790px) {
+  .fact-venue-institution {font-size:.61em;}
+}
+@media(max-width:600px) {
+  .fact-venue-institution {font-size:13px; margin-top:3px;}
+  .contact-email-address {font-size:clamp(21px,5.1vw,26px);}
+  .contact-actions {gap:16px;}
+  .contact-copy-button {font-size:12px;}
+}

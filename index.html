@@ -18,12 +18,12 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="top"><div class="wrap nav-row">
 <a aria-label="Gender-inclusive Cities home" class="brand" href="#top"><span class="brand-symbol">G<span>/</span>C</span><span class="brand-label">GENDER-INCLUSIVE<br/>CITIES</span></a>
-<nav aria-label="Main navigation" class="nav-links"><a href="#speakers">Speakers</a><a href="#themes">Themes</a><a href="#programme">Programme</a><a href="#information">Information</a><a class="nav-contact" href="mailto:jiayi.jin@strath.ac.uk?subject=Gender-inclusive%20Cities%20conference%20enquiry">Get in touch <span aria-hidden="true">↗</span></a></nav>
+<nav aria-label="Main navigation" class="nav-links"><a href="#speakers">Speakers</a><a href="#themes">Themes</a><a href="#programme">Programme</a><a href="#information">Information</a><a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></nav>
 </div></header>
 <section aria-label="Conference essentials" class="facts-strip">
 <div class="wrap facts-row">
 <div class="fact-cell">01–02 JUNE 2027</div>
-<div class="fact-cell">TIC, GLASGOW</div>
+<div class="fact-cell fact-venue">TIC, GLASGOW <span class="fact-venue-institution">UNIVERSITY OF STRATHCLYDE</span></div>
 <div class="fact-cell">ABSTRACT SUBMISSION <span class="fact-nowrap">(01 FEB 2027)</span></div>
 </div>
 </section>
@@ -124,8 +124,60 @@
 </div>
 </div></div></section>
 <section class="information-section wrap" id="information"><div class="section-kicker">PRACTICAL INFORMATION</div><div class="information-grid"><div><h2>A place to<br/><em>exchange ideas.</em></h2><p>The conference will bring together academic research, policy and professional practice, with opportunities for exchange across disciplines and career stages.</p></div><div class="information-details"><div><span>DATE</span><strong>01–02 June 2027</strong><p>Two-day conference.</p></div><div><span>VENUE</span><strong>TIC, Glasgow</strong><p>Technology and Innovation Centre, Glasgow.</p></div><div><span>SUBMISSIONS</span><strong>Abstract submission · 01 February 2027</strong><p>Further submission and registration details will be announced.</p></div><div><span>CONVENOR</span><strong>Dr Jiayi Jin</strong><p>University of Strathclyde.</p></div></div></div></section>
-<section class="contact-section" id="contact"><div class="wrap contact-inner"><div><span class="section-kicker">ENQUIRIES</span><h2>Join the<br/><em>conversation.</em></h2></div><div class="contact-right"><p>Registration has not yet opened. For enquiries, speaker updates and opportunities to contribute, get in touch with the conference organiser.</p><a class="contact-button" href="mailto:jiayi.jin@strath.ac.uk?subject=Gender-inclusive%20Cities%20conference%20enquiry">CONTACT THE ORGANISER <span aria-hidden="true">↗</span></a></div></div></section>
+<section class="contact-section" id="contact"><div class="wrap contact-inner"><div><span class="section-kicker">ENQUIRIES</span><h2>Join the<br/><em>conversation.</em></h2></div><div class="contact-right">
+<p>Registration has not yet opened. For enquiries, speaker updates and opportunities to contribute, get in touch with the conference organiser.</p>
+<div class="contact-email-block">
+  <span class="contact-email-label">ORGANISER EMAIL</span>
+  <a class="contact-email-address" href="mailto:jiayi.jin@strath.ac.uk?subject=Gender-inclusive%20Cities%20conference%20enquiry">jiayi.jin@strath.ac.uk</a>
+</div>
+<div class="contact-actions">
+  <button class="contact-button contact-copy-button" type="button" hidden data-copy-email="jiayi.jin@strath.ac.uk" aria-describedby="contact-copy-status">COPY EMAIL <span aria-hidden="true">⧉</span></button>
+  <a class="contact-email-app" href="mailto:jiayi.jin@strath.ac.uk?subject=Gender-inclusive%20Cities%20conference%20enquiry">OPEN EMAIL APP <span aria-hidden="true">↗</span></a>
+</div>
+<p class="contact-copy-status" id="contact-copy-status" role="status" aria-live="polite"></p>
+<p class="contact-email-help">If your email app does not open, copy the address above into your preferred email service.</p>
+</div></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><div><strong>GENDER-INCLUSIVE CITIES<span>.</span></strong><p>Walking, Lived Experience, and International Urban Knowledge.</p></div><div><p>Convened by Dr Jiayi Jin · University of Strathclyde<br/>British Academy Conferences 2027–28</p><p class="fineprint">Speaker line-up and registration information are subject to updates.</p></div><a href="#top">BACK TO TOP ↑</a></div></footer>
+<script>
+/* Progressive enhancement only: the contact address remains visible and
+   selectable even with JavaScript, clipboard permissions or email handlers off. */
+(function () {
+  var copyButton = document.querySelector('[data-copy-email]');
+  var status = document.getElementById('contact-copy-status');
+  if (!copyButton || !status) return;
+  copyButton.hidden = false; // Avoid a dead control when JavaScript is disabled.
+
+  function legacyCopy(value) {
+    var input = document.createElement('textarea');
+    input.value = value;
+    input.setAttribute('readonly', '');
+    input.style.position = 'fixed';
+    input.style.opacity = '0';
+    document.body.appendChild(input);
+    input.focus();
+    input.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(input);
+    return ok;
+  }
+
+  copyButton.addEventListener('click', async function () {
+    var email = copyButton.getAttribute('data-copy-email');
+    var copied = false;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email);
+        copied = true;
+      }
+    } catch (e) { copied = false; }
+    if (!copied) copied = legacyCopy(email);
+    status.textContent = copied
+      ? 'Email address copied. Paste it into your email service.'
+      : 'Copy was blocked by your browser. Please select the email address above and copy it manually.';
+  });
+})();
+</script>
 </body>
 </html>

@@ -467,3 +467,103 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
     font-size:13.5px;
   }
 }
+
+
+/* v9 — four precise typographic and section-divider refinements. */
+/* Speakers headline now follows the same type scale as the adjacent themes H2. */
+#speakers .section-intro h2 {
+  font-size:clamp(44px, 5vw, 74px);
+  line-height:1;
+  letter-spacing:-.065em;
+  font-weight:800;
+}
+/* Match the two-stage separation after theme 04:
+   short line at the content width -> generous blank space -> full-width rule. */
+#speakers {
+  border-bottom:1px solid var(--line);
+  padding-bottom:115px; /* same gap as #themes before Programme */
+}
+#speakers > .wrap {
+  border-bottom:1px solid var(--line);
+  /* the existing 72px padding between heading and short rule is retained */
+}
+/* Increase copy width (same right edge) to avoid a stranded word on desktop. */
+#themes .themes-header p {
+  width:100%;
+  max-width:510px;
+  text-align:right;
+  justify-self:end;
+  margin:0 0 6px auto;
+}
+/* Make the disclosure chevrons visually balance the large 01–04 numerals. */
+#themes .theme-summary {
+  grid-template-columns:150px minmax(0,1fr) 48px;
+}
+#themes .theme-chevron {
+  width:40px;
+  height:40px;
+  stroke-width:0;
+}
+#themes .theme-chevron path { stroke-width:3.7; }
+@media(max-width:930px) {
+  #themes .theme-summary { grid-template-columns:105px minmax(0,1fr) 42px; }
+  #themes .theme-chevron { width:36px; height:36px; }
+}
+@media(max-width:670px) {
+  #speakers { padding-bottom:73px; } /* matches the theme/programme mobile gap */
+  #speakers .section-intro h2 { font-size:clamp(42px,10vw,60px); }
+  #themes .themes-header p { max-width:100%; }
+  #themes .theme-summary { grid-template-columns:68px minmax(0,1fr) 32px; }
+  #themes .theme-chevron { width:30px; height:30px; }
+}
+@media(max-width:380px) {
+  #themes .theme-summary { grid-template-columns:59px minmax(0,1fr) 29px; }
+  #themes .theme-chevron { width:28px; height:28px; }
+}
+
+
+/* v11: two-day programme structure, closely following the approved diagram. */
+#programme .programme-inner {grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:54px;align-items:start}
+#programme .programme-lead>p {max-width:470px}
+#programme .schedule-preview {background:transparent;border:1px solid var(--line);padding:29px 30px 28px;min-width:0}
+#programme .schedule-top {display:block;margin:0;padding:0 0 21px;color:var(--blue);font-size:clamp(17px,1.6vw,23px);font-weight:800;line-height:1.25;letter-spacing:.075em;border-bottom:1px solid var(--line)}
+#programme .schedule-day {padding-top:24px}
+#programme .schedule-day+.schedule-day {border-top:1px solid var(--line);margin-top:27px;padding-top:27px}
+#programme .schedule-date {font-size:clamp(18px,1.55vw,22px);font-weight:750;line-height:1.2;letter-spacing:-.025em;margin:0 0 13px}
+#programme .schedule-slot {display:grid;grid-template-columns:60px minmax(0,1fr);gap:13px;padding:0 0 17px;min-width:0}
+#programme .schedule-slot+.schedule-slot {border-top:1px solid var(--line);padding-top:17px}
+#programme .schedule-slot:last-child {padding-bottom:0}
+#programme .schedule-period {font-weight:750;font-size:clamp(17px,1.5vw,21px);line-height:1.3;padding-top:2px}
+#programme .schedule-events {min-width:0;display:flex;flex-direction:column;gap:18px}
+#programme .schedule-standalone {font-size:clamp(17px,1.5vw,21px);font-weight:700;line-height:1.35;margin:0;letter-spacing:-.025em}
+#programme .session-link {display:grid;grid-template-columns:49px minmax(0,1fr) 21px;gap:10px;align-items:start;min-width:0;color:var(--ink);text-decoration:none}
+#programme .session-link:hover .session-name,#programme .session-link:focus-visible .session-name {color:var(--blue)}
+#programme .session-num {color:var(--blue);font-size:clamp(23px,1.95vw,29px);font-weight:800;line-height:1.12;letter-spacing:-.045em}
+#programme .session-name {font-weight:700;font-size:clamp(17px,1.43vw,20px);line-height:1.28;letter-spacing:-.03em}
+#programme .session-arrow {justify-self:end;color:var(--blue);font-size:clamp(21px,1.75vw,25px);font-weight:450;line-height:1.2}
+@media(max-width:1050px){
+  #programme .programme-inner {grid-template-columns:1fr;gap:35px}
+  #programme .programme-lead>p {max-width:690px}
+}
+@media(max-width:670px){
+  #programme .schedule-preview {padding:20px 17px}
+  #programme .schedule-top {font-size:17px;padding-bottom:17px}
+  #programme .schedule-day {padding-top:20px}
+  #programme .schedule-day+.schedule-day {margin-top:20px;padding-top:22px}
+  #programme .schedule-date {font-size:19px}
+  #programme .schedule-slot {grid-template-columns:33px minmax(0,1fr);gap:11px;padding-bottom:18px}
+  #programme .schedule-slot+.schedule-slot {padding-top:18px}
+  #programme .schedule-period {font-size:17px}
+  #programme .schedule-events {gap:14px}
+  #programme .schedule-standalone {font-size:17px}
+  #programme .session-link {grid-template-columns:31px minmax(0,1fr) 18px;gap:9px}
+  #programme .session-num {font-size:23px}
+  #programme .session-name {font-size:17px}
+  #programme .session-arrow {font-size:21px}
+}
+@media(max-width:380px){
+  #programme .schedule-preview {padding:18px 12px}
+  #programme .schedule-slot {grid-template-columns:30px minmax(0,1fr);gap:8px}
+  #programme .session-link {grid-template-columns:28px minmax(0,1fr) 17px;gap:7px}
+  #programme .session-name {font-size:16px}
+}

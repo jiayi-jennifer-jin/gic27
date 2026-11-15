@@ -324,3 +324,18 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   .hero-copy > p{font-size:17px}
   .organisation-label{font-size:16px}
 }
+
+
+/* v6: Keep the Speakers headline and announcement, but defer the full line-up.
+   Removing `hidden` from the speaker groups restores their original content. */
+.speaker-group[hidden], .speaker-disclaimer[hidden] { display:none !important; }
+.speakers-section { padding-top:52px; padding-bottom:3px; background:var(--paper); }
+.speakers-section .section-intro { margin:0; }
+.speakers-section .section-intro h2 { margin:0; }
+.themes-section { padding-top:29px; }
+.themes-section .themes-header { margin-top:16px; }
+.theme-item { scroll-margin-top:100px; }
+@media (max-width:670px) {
+  .speakers-section { padding-top:36px; padding-bottom:0; }
+  .themes-section { padding-top:24px; }
+}

@@ -878,3 +878,47 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   .facts-strip .fact-cell:nth-child(2),
   .facts-strip .fact-cell:nth-child(3) {font-size:clamp(12px,3.75vw,15px);}
 }
+
+
+/* v18 — Programme typography and even event rhythm.
+   Equal-height first-row baselines align AM/PM with the corresponding events;
+   consistent row gaps separate all agenda entries. */
+#programme .schedule-events { gap:14px; }
+#programme .schedule-standalone {
+  min-height:40px; display:flex; align-items:flex-end;
+}
+#programme .session-link {min-height:40px;}
+#programme .schedule-period {
+  display:flex; align-items:flex-end; align-self:start;
+  min-height:40px; padding:0 0 2px; line-height:1.2;
+}
+#programme .schedule-slot {padding-bottom:20px;}
+#programme .schedule-slot+.schedule-slot {padding-top:20px;}
+#programme .schedule-slot:last-child {padding-bottom:0;}
+#programme .programme-status {
+  font-size:clamp(18px,1.55vw,22px);
+  letter-spacing:.015em; gap:14px;
+  line-height:1.2;
+}
+#programme .programme-status span {
+  display:inline-flex; align-items:center; justify-content:center;
+  flex:none; width:32px; height:32px;
+}
+#programme .programme-status-arrow-icon {
+  display:block; flex:none; width:32px; height:32px; color:var(--blue);
+}
+@media(max-width:670px){
+  #programme .schedule-events {gap:12px;}
+  #programme .schedule-standalone,
+  #programme .session-link,
+  #programme .schedule-period {min-height:34px;}
+  #programme .schedule-period {padding-bottom:1px;}
+  #programme .schedule-slot {padding-bottom:18px;}
+  #programme .schedule-slot+.schedule-slot {padding-top:18px;}
+  #programme .programme-status {font-size:19px;gap:10px;}
+  #programme .programme-status span,
+  #programme .programme-status-arrow-icon {width:30px;height:30px;}
+}
+@media(max-width:380px){
+  #programme .programme-status {font-size:18px;}
+}

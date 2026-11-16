@@ -477,15 +477,18 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   letter-spacing:-.065em;
   font-weight:800;
 }
-/* Match the two-stage separation after theme 04:
-   short line at the content width -> generous blank space -> full-width rule. */
+/* v17 — use one single full-width divider between Speakers and The Conversation,
+   with spacing that matches the other section dividers on the page. */
 #speakers {
   border-bottom:1px solid var(--line);
-  padding-bottom:115px; /* same gap as #themes before Programme */
+  padding-bottom:100px;
 }
 #speakers > .wrap {
-  border-bottom:1px solid var(--line);
-  /* the existing 72px padding between heading and short rule is retained */
+  border-bottom:0;
+  padding-bottom:0;
+}
+#themes {
+  padding-top:100px;
 }
 /* Increase copy width (same right edge) to avoid a stranded word on desktop. */
 #themes .themes-header p {
@@ -510,8 +513,9 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   #themes .theme-chevron { width:36px; height:36px; }
 }
 @media(max-width:670px) {
-  #speakers { padding-bottom:73px; } /* matches the theme/programme mobile gap */
+  #speakers { padding-bottom:75px; }
   #speakers .section-intro h2 { font-size:clamp(42px,10vw,60px); }
+  #themes { padding-top:75px; }
   #themes .themes-header p { max-width:100%; }
   #themes .theme-summary { grid-template-columns:68px minmax(0,1fr) 32px; }
   #themes .theme-chevron { width:30px; height:30px; }

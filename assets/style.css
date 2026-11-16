@@ -708,3 +708,71 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   .contact-actions {gap:16px;}
   .contact-copy-button {font-size:12px;}
 }
+
+
+/* v15 — header and facts-only revisions. No edits to the hero or later sections. */
+/* Keep the five navigation controls at exactly the same size. */
+.site-header .nav-links { font-size:18px; gap:36px; }
+.site-header .nav-links > a,
+.site-header .nav-links > .nav-contact { font-size:inherit; font-weight:700; letter-spacing:0; }
+/* Three editorial facts on one line, with a consistent size that scales as a group. */
+.facts-strip .facts-row {
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr) max-content;
+  align-items:center;
+  gap:22px;
+  padding-top:23px;
+  padding-bottom:25px;
+}
+.facts-strip .fact-cell,
+.facts-strip .fact-cell:nth-child(2),
+.facts-strip .fact-cell:nth-child(3) {
+  min-width:0;
+  grid-column:auto;
+  font-size:18px;
+  font-weight:750;
+  line-height:1.25;
+  padding:0;
+  border:0;
+  text-align:left;
+  white-space:nowrap;
+}
+.facts-strip .fact-venue { justify-self:center; }
+.facts-strip .fact-cell:last-child { justify-self:end; }
+@media(max-width:1200px) {
+  .site-header .nav-links {font-size:16px;gap:22px;}
+  .facts-strip .facts-row {gap:16px;}
+  .facts-strip .fact-cell,
+  .facts-strip .fact-cell:nth-child(2),
+  .facts-strip .fact-cell:nth-child(3) {font-size:15px;}
+}
+@media(max-width:930px) {
+  .site-header .nav-links {font-size:14.5px;gap:15px;}
+  .facts-strip .facts-row {gap:10px;}
+  .facts-strip .fact-cell,
+  .facts-strip .fact-cell:nth-child(2),
+  .facts-strip .fact-cell:nth-child(3) {font-size:13px;}
+}
+@media(max-width:790px) and (min-width:601px) {
+  .facts-strip .fact-cell,
+  .facts-strip .fact-cell:nth-child(2),
+  .facts-strip .fact-cell:nth-child(3) {font-size:12px;}
+}
+@media(max-width:600px) {
+  .facts-strip .facts-row {grid-template-columns:1fr;gap:0;padding-top:12px;padding-bottom:12px;}
+  .facts-strip .fact-cell,
+  .facts-strip .fact-cell:nth-child(2),
+  .facts-strip .fact-cell:nth-child(3) {
+    grid-column:1; justify-self:start; padding:8px 0;
+    border:0; text-align:left; font-size:16px;
+  }
+  .facts-strip .fact-venue { justify-self:start; }
+  .facts-strip .fact-cell + .fact-cell {border-top:1px solid var(--line);width:100%;}
+}
+@media(max-width:600px) {
+  .site-header .nav-links {font-size:14px;}
+  .site-header .nav-links > .nav-contact {font-size:inherit;}
+  .facts-strip .fact-cell,
+  .facts-strip .fact-cell:nth-child(2),
+  .facts-strip .fact-cell:nth-child(3) {font-size:clamp(11.5px,3.35vw,15px);}
+}

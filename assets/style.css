@@ -922,3 +922,81 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
 @media(max-width:380px){
   #programme .programme-status {font-size:18px;}
 }
+
+
+/* v19 — Practical Information as a full-width photographic chapter.
+   Layout preserves original left-side text and stores the existing right-hand
+   logistical details in HTML for a later editorial decision. */
+#information.information-section {
+  --chapter-height:clamp(820px,calc(28.8vw + 489px),938px);
+  min-height:var(--chapter-height);
+  padding:0;
+  border-top:0;
+  background-color:#07090b;
+  background-image:url('glitchy-night-street-crossing.webp');
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  color:#fff;
+  position:relative;
+  isolation:isolate;
+}
+#information.information-section::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.40) 0%,rgba(0,0,0,.20) 43%,rgba(0,0,0,0) 76%);
+}
+#information .information-inner {
+  min-height:var(--chapter-height);
+  padding-top:70px;
+  padding-bottom:52px;
+  position:relative;
+  z-index:1;
+}
+#information .section-kicker {
+  color:#fff;
+  font-size:14.5px;
+  line-height:1.3;
+  letter-spacing:.08em;
+  font-weight:800;
+}
+#information .information-grid {
+  grid-template-columns:minmax(0,680px);
+  gap:0;
+  margin-top:24px;
+}
+#information .information-grid>div:first-child h2 {
+  color:#fff;
+}
+#information .information-grid>div:first-child h2 em {
+  color:#f5bd24; /* Same gold italic emphasis as the Hero heading. */
+}
+#information .information-grid>div:first-child p {
+  color:#fff;
+}
+#information .information-details {
+  display:none; /* Not deleted: logistical copy is intentionally deferred. */
+}
+@media(max-width:1150px) {
+  #information.information-section {--chapter-height:clamp(800px,calc(22.5vw + 576px),835px);}
+}
+@media(max-width:790px) {
+  #information.information-section {--chapter-height:790px;}
+  #information .information-inner {padding-top:55px;padding-bottom:40px;}
+}
+@media(max-width:670px) {
+  #information .section-kicker {font-size:13.5px;}
+}
+@media(max-width:600px) {
+  #information.information-section {--chapter-height:820px;}
+  #information .information-inner {padding-top:45px;padding-bottom:34px;}
+  #information .information-grid {margin-top:20px;}
+  #information .information-grid>div:first-child p {font-size:14px;line-height:1.65;max-width:350px;}
+  #information.information-section {background-position:62% center;}
+}
+@media(max-width:360px) {
+  #information.information-section {--chapter-height:800px;}
+}

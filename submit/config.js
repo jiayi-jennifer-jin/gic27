@@ -1,0 +1,9 @@
+/* GIC 2027 submission configuration. PUBLIC, not a place for secrets.
+   Before opening: deploy Apps Script, approve a privacy notice, then fill in
+   the HTTPS /exec endpoint and the privacy-notice URL and set open:true. */
+window.GIC_SUBMISSION_CONFIG = Object.freeze({
+  endpoint: "",
+  privacyNoticeUrl: "",
+  open: false,
+  deadlineUtc: "2027-02-01T23:59:59Z"
+});

@@ -123,3 +123,12 @@ Only the Programme section has changed since v11:
 - Matched Practical Information section minimum heights to Hero at each viewport breakpoint.
 - Temporarily hid the right-hand logistical text via CSS, without removing its HTML for later editing.
 - Left all other sections and submission links unchanged.
+
+
+## v20 — Custom abstract submission page (staged, not yet receiving data)
+- Added `/submit/` with a responsive, custom-designed abstract submission page.
+- The homepage top-right `ABSTRACT SUBMISSION (01 FEB 2027)` now opens `/submit/`.
+- Core submission form uses 500-word live count, four themes, author declaration, interest in optional future full-paper publication, and a required privacy acknowledgment.
+- No data are collected until the separate Apps Script service is authorised, configured and enabled, and an approved institutional privacy notice is linked.
+- The Apps Script service is supplied in the SEPARATE backend ZIP; never upload its private Sheet data to GitHub.
+- Because the response is a server-confirmed POST receipt, the browser navigates to the Google-hosted confirmation page after successful submission.

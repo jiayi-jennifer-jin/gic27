@@ -142,3 +142,12 @@ Only the Programme section has changed since v11:
 - Full-paper file upload has NOT been added: storage permissions / file handling require separate engineering and testing.
 - University of Strathclyde's conferences-and-events policy has NOT been adopted as the independent conference's privacy policy without confirmation that it covers this independently managed Google account.
 - Config preserves the currently supplied public `/exec` endpoint, but `open:false` and `privacyNoticeUrl:""` remain unchanged. Backend does not need to be redeployed for these editorial changes.
+
+
+## v22 — Homepage programme, information, proceedings and timeline
+- Replaced the Programme introduction with the supplied three paragraphs; retained the proposed session grid, links and arrows.
+- Renamed Practical Information to INFORMATION, retaining the existing dark photographic backdrop and hidden right-side logistical details, and added the supplied four paragraphs.
+- Added a Proceedings section with Book of Abstracts, Policy & Practice, and British Academy Proceedings, using the supplied publishing copy.
+- Added a responsive Timeline section with all five supplied stages and their specified suggested dates and requirements.
+- The submission form and backend configuration are unchanged. `open: false` is preserved.
+- Before public announcement: confirm the Book of Abstracts imprint and ISBN plan; BA Proceedings publication and open-access plans; whether a 300-word minimum and a 2,000–3,000-word May draft are requirements for all presenters.

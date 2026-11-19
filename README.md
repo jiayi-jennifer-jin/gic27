@@ -132,3 +132,13 @@ Only the Programme section has changed since v11:
 - No data are collected until the separate Apps Script service is authorised, configured and enabled, and an approved institutional privacy notice is linked.
 - The Apps Script service is supplied in the SEPARATE backend ZIP; never upload its private Sheet data to GitHub.
 - Because the response is a server-confirmed POST receipt, the browser navigates to the Google-hosted confirmation page after successful submission.
+
+
+## v21 (19 November 2026) — submission editorial review
+- Submission page intro updated to “We invite contributions ...”.
+- Removed “Before You Submit”, “One abstract. Four conversations.” and 3-step tips; the four conference themes remain as a compact reminder aligned at the top with the right-hand form.
+- Added co-author accuracy instruction and renamed section 02 to “Title and abstract”.
+- Publication copy now distinguishes a planned ISBN Book of Abstracts from a proposed (not yet accepted) British Academy Proceedings volume; no unverified 2027 OA promise.
+- Full-paper file upload has NOT been added: storage permissions / file handling require separate engineering and testing.
+- University of Strathclyde's conferences-and-events policy has NOT been adopted as the independent conference's privacy policy without confirmation that it covers this independently managed Google account.
+- Config preserves the currently supplied public `/exec` endpoint, but `open:false` and `privacyNoticeUrl:""` remain unchanged. Backend does not need to be redeployed for these editorial changes.

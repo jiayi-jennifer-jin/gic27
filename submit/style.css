@@ -83,3 +83,19 @@
 @media(max-width:1150px){.submit-hero{gap:5%;padding-top:78px}.submission-layout{gap:60px;grid-template-columns:minmax(230px,.8fr) minmax(0,1.4fr)}}
 @media(max-width:930px){.submit-hero{grid-template-columns:1fr;gap:35px;padding-block:65px}.submit-metrics{display:grid;grid-template-columns:1fr 1fr;gap:26px}.submission-layout{grid-template-columns:1fr;padding-top:66px;gap:63px}.submission-aside{max-width:780px}.guidance-panel{margin:30px 0;}.publication-note{max-width:650px}}
 @media(max-width:670px){.submit-hero{padding-block:50px 56px}.submit-hero h1{font-size:clamp(53px,11.5vw,76px);margin-bottom:24px}.submit-deck{font-size:16px}.submit-metrics{grid-template-columns:1fr;gap:0}.submit-metrics>div{padding:15px 0 19px}.submit-metrics strong{font-size:24px}.submission-layout{padding-top:53px;padding-bottom:83px;gap:50px}.submission-aside h2{font-size:47px}.form-intro h2{font-size:42px}.form-section>legend{font-size:22px}.form-row input,.form-row textarea,.form-row select{font-size:16px}.label-row{flex-wrap:wrap}.word-count{margin-left:auto}.form-section+ .form-section{padding-top:30px}.submission-notice{padding:15px}.choice{padding:10px 0}}
+
+
+/* v21 — editorial layout of submission guidelines, retaining the aligned two-column top. */
+.submission-themes-intro{font-size:16px;line-height:1.72;color:#464850;margin:0 0 30px}
+.submission-themes{list-style:none;padding:0;margin:0 0 46px;border-top:1px solid var(--line)}
+.submission-themes li{display:grid;grid-template-columns:45px minmax(0,1fr);gap:17px;align-items:start;border-bottom:1px solid var(--line);padding:20px 0 19px}
+.submission-themes li span{color:var(--blue);font-size:23px;font-weight:800;line-height:1.2;letter-spacing:-.045em}
+.submission-themes li strong{font-size:17px;line-height:1.36;font-weight:720;letter-spacing:-.025em}
+.publication-note p+p{margin-top:14px}
+@media(max-width:930px){.submission-themes{max-width:650px}}
+@media(max-width:670px){
+ .submission-themes-intro{font-size:15px;margin-bottom:25px}
+ .submission-themes li{grid-template-columns:40px minmax(0,1fr);gap:12px;padding:16px 0}
+ .submission-themes li strong{font-size:16px}
+ .submission-themes li span{font-size:21px}
+}

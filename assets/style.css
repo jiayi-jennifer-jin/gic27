@@ -1289,3 +1289,73 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
   .facts-strip .fact-venue-link .venue-main {font-size:12px;}
   .facts-strip .fact-venue-link .venue-location {font-size:9.5px;}
 }
+
+
+/* v25 — consistent editorial body typography and targeted homepage refinements. */
+/* The expanded Conversation paragraphs provide the body-text scale: 18px desktop,
+   17px mobile. Keep headlines, captions and schedule metadata on their own scales. */
+#programme .programme-description p,
+#information .information-copy p,
+#proceedings .proceedings-item p,
+#timeline .timeline-requirement {
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* Information starts at the same page grid edge and uses nearly the same line width
+   as Programme's editorial copy (520px), without disturbing the photographic chapter. */
+#information .information-grid {grid-template-columns:minmax(0,540px);}
+#information .information-copy,
+#information .information-copy p {max-width:540px;}
+
+/* A link on TIC only; remaining location string is plain text. */
+.facts-strip .fact-venue-link:hover {color:inherit;text-decoration:none;}
+.facts-strip .venue-tic-link {color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+.facts-strip .venue-tic-link:hover {color:var(--blue);text-decoration:underline;text-underline-offset:3px;}
+.facts-strip .venue-tic-link:focus-visible {outline:2px solid var(--blue);outline-offset:3px;}
+
+/* Shorter vertical rhythm between the three pathways. */
+#proceedings .proceedings-item {padding-top:25px;padding-bottom:28px;}
+
+/* Lead copy begins at the same vertical position as the invitation on the right. */
+#contact .contact-inner {align-items:start;}
+#contact .contact-inner h2 {margin-top:0;}
+#contact .contact-right {padding-top:2px;}
+
+/* Match footer's two editorial lines in separate columns by a shared row rhythm. */
+.footer-inner .footer-conference,
+.footer-inner .footer-credits {display:grid;grid-template-rows:28px auto;align-content:start;}
+.footer-inner .footer-conference strong {line-height:28px;}
+.footer-inner .footer-conference p,
+.footer-inner .footer-credits p {margin:0;line-height:1.7;}
+.footer-inner .footer-credits p:first-child {line-height:28px;}
+.footer-inner .footer-credits p:last-child {align-self:start;}
+
+@media(max-width:790px) {
+  #proceedings .proceedings-item {padding-top:23px;padding-bottom:25px;}
+}
+@media(max-width:670px) {
+  #programme .programme-description p,
+  #information .information-copy p,
+  #proceedings .proceedings-item p,
+  #timeline .timeline-requirement {
+    font-size:17px;
+    line-height:1.65;
+  }
+  #information .information-grid {grid-template-columns:minmax(0,1fr);}
+  #information .information-copy,
+  #information .information-copy p {max-width:100%;}
+  #contact .contact-right {padding-top:0;}
+  #proceedings .proceedings-item {padding-top:21px;padding-bottom:23px;}
+}
+
+/* Higher-specificity Information rules from earlier revisions must not override
+   the Conversation-matched type scale on mobile. */
+#information .information-grid>div:first-child p {font-size:18px;line-height:1.7;max-width:540px;}
+@media(max-width:930px) and (min-width:671px) {
+  .footer-inner {grid-template-columns:1fr;gap:15px;}
+  .footer-inner>a {text-align:left;}
+}
+@media(max-width:670px) {
+  #information .information-grid>div:first-child p {font-size:17px;line-height:1.65;max-width:100%;}
+}

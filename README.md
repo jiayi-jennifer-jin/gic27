@@ -151,3 +151,41 @@ Only the Programme section has changed since v11:
 - Added a responsive Timeline section with all five supplied stages and their specified suggested dates and requirements.
 - The submission form and backend configuration are unchanged. `open: false` is preserved.
 - Before public announcement: confirm the Book of Abstracts imprint and ISBN plan; BA Proceedings publication and open-access plans; whether a 300-word minimum and a 2,000–3,000-word May draft are requirements for all presenters.
+
+
+## v23 — Submission page publication and privacy copy
+- Replaced the publication opportunities section with the exact text supplied by the organisers, including the ISBN Book of Abstracts and British Academy Proceedings statements.
+- Replaced the privacy section and checkbox label with the supplied University of Strathclyde wording.
+- Connected the privacy notice to the direct Strathclyde PDF URL (not the Outlook Safe Links wrapper).
+- Left submission open:false, endpoint and Apps Script backend unchanged.
+- Before going live, organisers should confirm the privacy-policy applicability and publication commitments.
+
+
+## v24 homepage refinements
+- The complete TECHNOLOGY & INNOVATION CENTRE, UNIVERSITY OF STRATHCLYDE, GLASGOW, UK venue now links to the official venue page.
+- Footer name Jiayi Jin now links to her Strathclyde staff profile.
+- Proceedings intro and outro explanatory sentences removed as requested.
+- Timeline kicker removed while the prominent Key dates. heading remains.
+- Timeline introductory sentence removed and SUGGESTED TIMING renamed DATES.
+- Date text now matches corresponding Stage name size at all breakpoints.
+- Submission page and Apps Script settings remain unchanged; submissions still disabled.
+
+
+## v25 — Homepage editorial typography and alignment
+- Body text for Programme, Information, Proceedings and Key Dates Requirements follows expanded Conversation panels (18px desktop / 17px mobile).
+- Information funding statement updated to name Dr Jiayi Jin.
+- Venue is TIC (only TIC linked); timeline header DATE.
+- Contact ENQUIRIES label and footer fineprint removed.
+- Aligned Contact heading and opening copy; adjusted footer second lines.
+- Reduced Proceedings row spacing.
+- Submission Page and Apps Script remain unchanged; submission remains disabled.
+
+
+## v26 — Submission page final copy and spacing
+- Privacy PDF link display shortened to “University Privacy Notice”; the URL is unchanged.
+- Required privacy acknowledgement now reads “I confirm that I have read and understood the Privacy Notice.”
+- Full-paper interest now displays only Yes / No, retaining backend-compatible values `Yes` and `No`.
+- Section 02 title label changed from “Abstract title” to “Title”; backend field name remains `abstract_title`.
+- Matched spacing beneath section headings 01/02/03; tightened full-paper interest heading-to-description gap.
+- Replaced submission page footer with exactly the homepage footer HTML including the organiser profile link.
+- Submission remains CLOSED; did not touch `submit/config.js`, Google backend, or homepage.

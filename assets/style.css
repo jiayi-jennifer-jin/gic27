@@ -1359,3 +1359,25 @@ body,button,a,input { font-family:Helvetica, Arial, sans-serif; }
 @media(max-width:670px) {
   #information .information-grid>div:first-child p {font-size:17px;line-height:1.65;max-width:100%;}
 }
+
+
+/* v29 — Align the footer's convenor/British Academy credit column with the
+   Contact section's right-hand Registration text, across desktop and tablet.
+   The matching positions use Contact's current 1fr/.7fr column ratio and gap. */
+@media (min-width:931px) {
+  .footer-inner {
+    grid-template-columns:calc((100% - 100px)/1.7 + 100px) minmax(0,1fr) 100px;
+    column-gap:0;
+  }
+}
+@media (min-width:671px) and (max-width:930px) {
+  .footer-inner {
+    grid-template-columns:calc((100% - 40px)/1.7 + 40px) minmax(0,1fr);
+    column-gap:0;
+    row-gap:14px;
+  }
+  .footer-inner .footer-credits {grid-column:2;}
+  .footer-inner>a {grid-column:2;justify-self:start;text-align:left;}
+}
+/* Allow long convenor credits to wrap without overlapping the following line. */
+.footer-inner .footer-credits {grid-template-rows:minmax(28px,auto) auto;}

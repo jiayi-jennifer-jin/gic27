@@ -82,7 +82,7 @@
       </fieldset>
       <fieldset class="form-section">
         <legend><span>02</span> Title and abstract</legend>
-        <div class="form-row"><label for="abstract_title">Abstract title <span aria-hidden="true" class="required-mark">*</span></label><input id="abstract_title" name="abstract_title" maxlength="320" required placeholder="Title of your contribution"></div>
+        <div class="form-row"><label for="abstract_title">Title <span aria-hidden="true" class="required-mark">*</span></label><input id="abstract_title" name="abstract_title" maxlength="320" required placeholder="Title of your contribution"></div>
         <div class="form-row"><div class="label-row"><label for="abstract_text">Abstract <span aria-hidden="true" class="required-mark">*</span></label><span id="word-count" class="word-count" aria-live="polite">0 / 500 words</span></div><textarea id="abstract_text" name="abstract_text" rows="10" maxlength="18000" required placeholder="Briefly describe your research purpose, approach, findings or main argument, and relevance to gender-inclusive urban research or practice."></textarea><p class="input-help" id="word-feedback">Maximum 500 words (whitespace-delimited count). Title and author details are excluded.</p></div>
         <div class="form-row"><label for="conference_theme">Conference theme <span aria-hidden="true" class="required-mark">*</span></label><div class="select-wrap"><select id="conference_theme" name="conference_theme" required><option value="">Select one theme</option><option value="Methodologies for Gender-Inclusive Research">01 — Methodologies for Gender-Inclusive Research</option><option value="Intersectionality and Lived Experience">02 — Intersectionality and Lived Experience</option><option value="Policy, Planning, and Practice">03 — Policy, Planning, and Practice</option><option value="Digital Urban Futures and Technology">04 — Digital Urban Futures and Technology</option></select></div><p class="input-help">The committee may suggest another theme where appropriate.</p></div>
         <fieldset class="nested-choice"><legend>Type of contribution <span aria-hidden="true" class="required-mark">*</span></legend>
@@ -97,15 +97,14 @@
         <label class="checkbox-line"><input type="checkbox" name="author_declaration" value="yes" required><span>I confirm that I am authorised to submit this work, that all listed co-authors have agreed to the submission, and that their names and affiliations are accurate. I understand that accepted presenters will be expected to confirm their participation. If accepted, the abstract may be included in the conference programme and the planned Book of Abstracts, subject to further publication arrangements communicated to authors. <b aria-hidden="true" class="required-mark">*</b></span></label>
         <fieldset class="nested-choice paper-choice"><legend>Interest in potential full-paper publication <span aria-hidden="true" class="required-mark">*</span></legend>
           <p class="input-help paper-intro">Selected contributors may later be invited to submit a full paper for a proposed <em>Proceedings of the British Academy</em> volume. Authors who accept a subsequent invitation would be expected to meet the agreed submission deadline and participate in editorial review. This does not guarantee publication.</p>
-          <label class="choice"><input type="radio" name="publication_interest" value="Yes" required><span>Yes — I am interested and understand the responsibilities involved.</span></label>
-          <label class="choice"><input type="radio" name="publication_interest" value="Possibly"><span>Possibly — depending on the arrangements and timeline.</span></label>
-          <label class="choice"><input type="radio" name="publication_interest" value="No"><span>No — I only wish to present at the conference.</span></label>
+          <label class="choice"><input type="radio" name="publication_interest" value="Yes" required><span>Yes — I am interested</span></label>
+          <label class="choice"><input type="radio" name="publication_interest" value="No"><span>No — I only wish to present at the conference</span></label>
         </fieldset>
         <div class="privacy-block">
           <p class="privacy-heading">Privacy and Personal Data</p>
-          <p>The personal information provided in this submission form will be used for the administration of the conference, including abstract review, communication with applicants and contributors, and related conference arrangements. These will be processed in accordance with the University of Strathclyde's data protection policies and procedures. For information about how your personal data is collected, used, stored and protected in connection with conferences and events, please refer to the <a id="privacy-notice-link" href="https://www.strath.ac.uk/media/ps/strategyandpolicy/University_Privacy_Notice_Conferences_and_Events.pdf" target="_blank" rel="noopener noreferrer">University Privacy Notice – Conferences and Events (PDF)</a>.</p>
+          <p>The personal information provided in this submission form will be used for the administration of the conference, including abstract review, communication with applicants and contributors, and related conference arrangements. These will be processed in accordance with the University of Strathclyde's data protection policies and procedures. For information about how your personal data is collected, used, stored and protected in connection with conferences and events, please refer to the <a id="privacy-notice-link" href="https://www.strath.ac.uk/media/ps/strategyandpolicy/University_Privacy_Notice_Conferences_and_Events.pdf" target="_blank" rel="noopener noreferrer">University Privacy Notice</a>.</p>
           <span id="privacy-notice-pending" hidden></span>
-          <label class="checkbox-line"><input type="checkbox" id="privacy_acknowledged" name="privacy_acknowledged" value="yes" required><span>I confirm that I have read and understood the University Privacy Notice – Conferences and Events. <b aria-hidden="true" class="required-mark">*</b></span></label>
+          <label class="checkbox-line"><input type="checkbox" id="privacy_acknowledged" name="privacy_acknowledged" value="yes" required><span>I confirm that I have read and understood the Privacy Notice. <b aria-hidden="true" class="required-mark">*</b></span></label>
         </div>
       </fieldset>
       <div class="submission-controls">
@@ -117,7 +116,7 @@
    </div>
   </section>
 </main>
-<footer class="footer"><div class="wrap footer-inner"><div><strong>GENDER-INCLUSIVE CITIES<span>.</span></strong><p>Walking, Lived Experience, and International Urban Knowledge.</p></div><div><p>Convened by Dr Jiayi Jin · University of Strathclyde<br>British Academy Conferences 2027–28</p><p class="fineprint">For enquiries: <a href="mailto:jiayi.jin@strath.ac.uk">jiayi.jin@strath.ac.uk</a></p></div><a href="#top">BACK TO TOP ↑</a></div></footer>
+<footer class="footer"><div class="wrap footer-inner"><div class="footer-conference"><strong>GENDER-INCLUSIVE CITIES<span>.</span></strong><p>Walking, Lived Experience, and International Urban Knowledge.</p></div><div class="footer-credits"><p>Convened by Dr <a class="convenor-link" href="https://www.strath.ac.uk/staff/drjiayijin/" target="_blank" rel="noopener noreferrer">Jiayi Jin</a> · University of Strathclyde</p><p>British Academy Conferences 2027–28</p></div><a href="#top">BACK TO TOP ↑</a></div></footer>
 <script src="config.js"></script>
 <script src="submit.js"></script>
 </body>

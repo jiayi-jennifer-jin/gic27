@@ -99,3 +99,17 @@
  .submission-themes li strong{font-size:16px}
  .submission-themes li span{font-size:21px}
 }
+
+
+/* v26 — equal header-to-first-input spacing across the three form chapters. */
+.form-section > legend { margin-bottom:20px; }
+/* The fieldset block after a previous section does not need extra legend spacing. */
+.form-section + .form-section > legend { margin-bottom:20px; }
+/* Publication-interest explanation begins as close to its heading as privacy copy. */
+.paper-choice > legend { margin-bottom:8px; }
+
+/* Native fieldset places the legend before padding; avoid accumulating that padding
+   into the label gap in chapters 02 and 03. Keep chapter separation via margin. */
+.form-section + .form-section { padding-top:0; margin-top:39px; }
+.paper-choice { padding-top:0; }
+@media(max-width:670px){ .form-section + .form-section { margin-top:30px; padding-top:0; } }

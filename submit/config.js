@@ -4,6 +4,6 @@
 window.GIC_SUBMISSION_CONFIG = Object.freeze({
   endpoint: "https://script.google.com/macros/s/AKfycbxrZcX20aNHRKKm_LfYE45JsEhmYcjv83p-Qf2UJM9a6WKnSChoy8rmguWeySTEjPoy/exec",
   privacyNoticeUrl: "",
-  open: false,
+  open: true,
   deadlineUtc: "2027-02-01T23:59:59Z"
 });
